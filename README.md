@@ -15,12 +15,12 @@
 
 ```html
 <template>
-	<ul>
-		<li>Главная</li>
-		<li>Каталог</li>
-		<li>Канцтовары</li>
-		<li>Письменная ручка</li>
-	</ul>
+  <ul>
+    <li>Главная</li>
+    <li>Каталог</li>
+    <li>Канцтовары</li>
+    <li>Письменная ручка</li>
+  </ul>
 </template>
 ```
 Допустим у нас стоит задача задать стили для ul(например, убрать отступы), для li(например, добавить у каждого пунка меню after-контент), а айтем "канцтовары" сделать красным цветом. 
@@ -29,26 +29,26 @@
 Нейминг для классов будет таков: 
 ```html
 <template>
-        <ul class="b-breadcrumbs">
-			<li class="breadcrumbs__item">Главная</li>
-			<li class="breadcrumbs__item">Каталог</li>
-			<li class="breadcrumbs__item breadcrumbs__item--red">Канцтовары</li>
-			<li class="breadcrumbs__item">Письменная ручка</li>
-		</ul>
+  <ul class="b-breadcrumbs">
+    <li class="breadcrumbs__item">Главная</li>
+    <li class="breadcrumbs__item">Каталог</li>
+    <li class="breadcrumbs__item breadcrumbs__item--red">Канцтовары</li>
+    <li class="breadcrumbs__item">Письменная ручка</li>
+  </ul>
 </template>
 ```
 scss же будет выглядеть примерно вот так: 
 ```scss
 .b-{
-	&breadcrumbs {
-		 /* стили для ul */
-		 .breadcrumbs__item {
-		 	 /* стили для li */
-			&--red {
-				/* стили для li{канцтовары} */
-			}
-		 }
-	}
+  &breadcrumbs {
+    /* стили для ul */
+    .breadcrumbs__item {
+      /* стили для li */
+      &--red {
+	/* стили для li{канцтовары} */
+      }
+    }
+  }
 }
 ```
 
